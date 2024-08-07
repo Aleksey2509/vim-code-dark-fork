@@ -160,13 +160,15 @@ if g:codedark_conservative | let s:cdYellow = s:cdFront | endif
 let s:cdPink = {'gui': '#C586C0', 'cterm': s:cterm0E, 'cterm256': '176'}
 if g:codedark_conservative | let s:cdPink = s:cdBlue | endif
 let s:cdSilver = {'gui': '#C0C0C0', 'cterm': s:cterm05, 'cterm256': '7'}
+let s:cdPurple = {'gui': '#CFCFCD', 'cterm': s:cterm06, 'cterm256': '104'}
+let s:cdFold = {'gui': '#CFCFCD', 'cterm': s:cterm06, 'cterm256': '245'}
 
 " UI (built-in)
 "    <sid>hi(GROUP, FOREGROUND, BACKGROUND, ATTRIBUTE, SPECIAL)
 call <sid>hi('Normal', s:cdFront, s:cdBack, 'none', {})
 call <sid>hi('ColorColumn', {}, s:cdCursorDarkDark, 'none', {})
 call <sid>hi('Cursor', s:cdCursorDark, s:cdCursorLight, 'none', {})
-call <sid>hi('CursorLine', {}, s:cdCursorDarkDark, 'none', {})
+call <sid>hi('CursorLine', {}, s:cdBack, 'none', {})
 hi! link CursorColumn CursorLine
 call <sid>hi('Directory', s:cdBlue, s:cdNone, 'none', {})
 call <sid>hi('DiffAdd', s:cdFront, s:cdDiffGreenLight, 'none', {})
@@ -176,12 +178,12 @@ call <sid>hi('DiffText', s:cdBack, s:cdDiffBlueLight, 'none', {})
 call <sid>hi('EndOfBuffer', s:cdLineNumber, s:cdBack, 'none', {})
 call <sid>hi('ErrorMsg', s:cdRed, s:cdBack, 'none', {})
 call <sid>hi('VertSplit', s:cdSplitDark, s:cdBack, 'none', {})
-call <sid>hi('Folded', s:cdLeftLight, s:cdLeftDark, 'underline', {})
+call <sid>hi('Folded', s:cdFold, s:cdBack, 'none', {})
 call <sid>hi('FoldColumn', s:cdLineNumber, s:cdBack, 'none', {})
 call <sid>hi('SignColumn', {}, s:cdBack, 'none', {})
 call <sid>hi('IncSearch', s:cdNone, s:cdSearchCurrent, 'none', {})
 call <sid>hi('LineNr', s:cdLineNumber, s:cdBack, 'none', {})
-call <sid>hi('CursorLineNr', s:cdPopupFront, s:cdBack, 'none', {})
+call <sid>hi('CursorLineNr', s:cdPurple, s:cdBack, 'none', {})
 call <sid>hi('MatchParen', s:cdNone, s:cdCursorDark, 'none', {})
 call <sid>hi('ModeMsg', s:cdFront, s:cdLeftDark, 'none', {})
 hi! link MoreMsg ModeMsg
@@ -247,7 +249,7 @@ call <sid>hi('Underlined', s:cdNone, {}, 'underline', {})
 call <sid>hi("Conceal", s:cdFront, s:cdBack, 'none', {})
 call <sid>hi('Ignore', s:cdBack, {}, 'none', {})
 call <sid>hi('Error', s:cdRed, s:cdBack, 'undercurl', s:cdRed)
-call <sid>hi('Todo', s:cdNone, s:cdLeftMid, 'none', {})
+call <sid>hi('Todo', s:cdYellowOrange, s:cdLeftMid, 'none', {})
 call <sid>hi('SpellBad', s:cdRed, s:cdBack, 'undercurl', s:cdRed)
 call <sid>hi('SpellCap', s:cdRed, s:cdBack, 'undercurl', s:cdRed)
 call <sid>hi('SpellRare', s:cdRed, s:cdBack, 'undercurl', s:cdRed)
@@ -631,6 +633,7 @@ call <sid>hi('EnumDecl', s:cdBlueGreen, {}, 'none', {})
 call <sid>hi('TemplateTypeParameter', s:cdBlueGreen, {}, 'none', {})
 call <sid>hi('TypeAliasTemplateDecl', s:cdBlueGreen, {}, 'none', {})
 call <sid>hi('ClassTemplate', s:cdBlueGreen, {}, 'none', {})
+call <sid>hi('darkModernGreen', s:cdBlueGreen, {}, 'none', {})
 call <sid>hi('ClassTemplatePartialSpecialization', s:cdBlueGreen, {}, 'none', {})
 call <sid>hi('FunctionTemplate', s:cdBlueGreen, {}, 'none', {})
 call <sid>hi('TemplateRef', s:cdBlueGreen, {}, 'none', {})
