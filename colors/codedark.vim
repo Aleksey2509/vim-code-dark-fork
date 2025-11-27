@@ -161,7 +161,7 @@ let s:cdPink = {'gui': '#C586C0', 'cterm': s:cterm0E, 'cterm256': '176'}
 if g:codedark_conservative | let s:cdPink = s:cdBlue | endif
 let s:cdSilver = {'gui': '#C0C0C0', 'cterm': s:cterm05, 'cterm256': '7'}
 let s:cdPurple = {'gui': '#CFCFCD', 'cterm': s:cterm06, 'cterm256': '104'}
-let s:cdFold = {'gui': '#CFCFCD', 'cterm': s:cterm06, 'cterm256': '245'}
+let s:cdFold = {'gui': '#8A8A8A', 'cterm': s:cterm06, 'cterm256': '245'}
 
 " UI (built-in)
 "    <sid>hi(GROUP, FOREGROUND, BACKGROUND, ATTRIBUTE, SPECIAL)
